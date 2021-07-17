@@ -1,0 +1,98 @@
+@import './varibales';
+
+.showMovie {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.openMovie {
+    display: flex;
+    flex-direction: column;
+
+    &__name {
+        color: $movie-info;
+        max-width: 600px;
+        font-size: 40px;
+    }
+    &__sezon {
+        color: $movie-info;
+        font-size: 16px;
+    }
+    &__reting {
+        display: flex;
+        flex-direction: row;
+    }
+    &__star {
+        font-size: 20px;
+        color: $movie-info;
+        &--checked {
+            color: $star-color;
+        }
+    }
+    &__info {
+        color: $movie-info;
+    }
+    &__buttons {
+        display: flex;
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+    &__playButton {
+        color: #e0e2df;
+        background-color: #104847;
+        border: none;
+        width: 62px;
+        height: 49px;
+    }
+    &__plusButton {
+        color: #e0e2df;
+        background-color: $logo-color;
+        border: none;
+        width: 62px;
+        height: 49px;
+    }
+    &__content {
+        color: $movie-content;
+        max-width: 400px;
+    }
+    &__img{
+        border: 2px solid $logo-color;
+    }
+}
+
+@media (max-width: 800px) {
+    .openMovie__img{
+        width: 250px;
+        height: auto;
+    }
+}
+@media (max-width: 500px) {
+    .openMovie{
+
+        &__name {
+            font-size: 24px;
+        }
+        &__img {
+            width: 150px;
+            height: 200px;
+            margin: auto;
+        }
+        &__sezon {
+            font-size: 12px;
+        }
+        &__star {
+            font-size: 15px;
+        }
+        &__playButton {
+            width: 45px;
+            height: 35px;
+        }
+        &__plusButton {
+            width: 45px;
+            height: 35px;
+        }
+    }
+}

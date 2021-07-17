@@ -1,0 +1,35 @@
+@import './varibales';
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: $movie-bg-color;
+    border: none;
+    
+    margin: 15px;
+    &__img {
+        width: 148px;
+        height: 185px;
+    }
+    &__name {
+        color: $movie-info;
+        max-width: 130px;
+    }
+    &:hover {
+        border:5px outset $logo-color;
+        transition-duration: 0.3s;
+        transform: scale(1.2, 1.2);
+    }
+}
+
+

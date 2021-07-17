@@ -1,0 +1,66 @@
+@import './varibales';
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $header-bg-color;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+    &__logo {
+        font-size: 20px;
+        color: $logo-color;
+    }
+    &__first-charcter {
+        font-size: 30px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        padding: 10px 20px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        color: $menu-link;
+        text-decoration: none;
+
+        &:hover {
+            color: $logo-color;
+        }
+    }
+    &__search {
+        background-color: $logo-color;
+        border: 2px solid $header-bg-color;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 16px;
+        color: #fff;
+        font-family: inhernt;
+        &:focus{
+            outline: 0;
+            background-color: $logo-color;
+        }
+        &::placeholder {
+            color: $header-bg-color;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        &__menu {
+            display: none;
+        }
+    }
+}
